@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+
+	<link rel="stylesheet" href="contact.css" type="text/css">
+
+</head>
+<body>
+
+	<div class="main">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Luxurious+Roman&display=swap" rel="stylesheet">
+		<div class="navbar">
+			<img src="images/logo.png" class="logo">
+
+			<ul>
+				<li> <a href="Boba ni Kyron.html">Home</a></li>
+				<li> <a href="menu.html">Menu</a></li>
+				<li> <a href="reservation.html">Reservations</a></li>
+				<li> <a href="about.html">About</a></li>
+				<li> <a href="contact.html" class="active">Contact</a></li>
+			</ul>
+		</div>
+
+	<div id="overlay">
+		<form>
+			<h1>Contact Us</h1>
+			<label for="name">Name:</label>
+			<input type="text" id="name" placeholder="Your name" required>
+			<small class="error"></small>
+
+			<label for="email">Email:</label>
+			<input type="text" id="email" placeholder="Your email" required>
+			<small class="error"></small>
+
+			<label for="message">Message:</label>
+			<textarea id="message" placeholder="Your message" rows="6" required></textarea>
+			<small class="error"></small>
+
+			<div>
+				<input type="submit" value="Send Message">	
+			</div>
+		</form> 
+	</div>

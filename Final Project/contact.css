@@ -1,0 +1,111 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Luxurious Roman', cursive;
+  color: #450000;
+  background-image: url(images/background.png);
+}
+
+.main{
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 135px;
+  cursor: pointer;
+  margin-top: -2.5%;
+}
+
+.logo2 {
+  margin-left: 5%;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px; 
+  position: relative;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #450000;
+  text-transform: uppercase;
+}
+.navbar ul li a.active{
+  color:#450000;
+  font-weight: bold;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0%;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+
+#overlay{
+  width: 100%;
+  height: 100%; 
+}
+
+form{
+  max-width: 550px;
+  width: 90%;
+  background-image: url(images/background.png);
+  margin: 17vh auto 0 auto;
+  padding: 40px;
+  border: 3px solid #450000;
+  box-sizing: border-box;
+}
+
+h1{
+   margin: 0;
+   text-align: center;
+}
+
+label{
+  display: block;
+  margin: 20px 0;
+}
+
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+}
+
+
+input[type="submit"] {
+  margin-top: 30px;
+  width: 90%
+  max-width: 200px; 
+  background: white;
+  color:#450000;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 3px;
+}

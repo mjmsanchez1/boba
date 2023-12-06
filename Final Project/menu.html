@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BnK Menu</title>
+
+	<link rel="stylesheet" href="menu.css" type="text/css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+	<div class="main">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Luxurious+Roman&display=swap" rel="stylesheet">
+		<div class="navbar">
+			<img src="images/logo.png" class="logo">
+			<ul>
+				<li> <a href="Boba ni Kyron.html">Home</a></li>
+				
+				<li> <a href="about.html">About</a></li>
+				<li> <a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+
+
+<div class="content" id="menuSection"> 
+    <h1>- Menu -</h1>
+
+		<section class="category">
+
+			<div class="list-items">
+				<h3>Popular Dishes</h3>
+				<div class="card-list">
+				
+
+
+
+					<div class="card" >
+						<img src="images/Strawberry_Oreo-removebg-preview.png">
+						<div class="food-title">
+							<h1>Strawberry Oreo</h1>
+						</div>
+						<div class="desc-food">
+							<p>sadasdasdasdasdasdasds</p>
+						</div>
+						<div class="price">
+							<span>10pesos</span><span><i class='bx bxs-plus-circle plus-icon' alt="Burger" onclick="showModal('burger', 5.00)"></i></span>
+						</div>
+					</div>
+
+
+
+					<div class="card" >
+						<img src="images/Strawberry_Oreo-removebg-preview.png">
+						<div class="food-title">
+							<h1>Strawberry Oreo</h1>
+						</div>
+						<div class="desc-food">
+							<p>sadasdasdasdasdasdasds</p>
+						</div>
+						<div class="price">
+							<span>10pesos</span><span><i class='bx bxs-plus-circle plus-icon' alt="Burger" onclick="showModal('burger', 5.00)"></i></span>
+						</div>
+					</div>
+
+					<div class="card" >
+						<img src="images/Strawberry_Oreo-removebg-preview.png">
+						<div class="food-title">
+							<h1>Strawberry Oreo</h1>
+						</div>
+						<div class="desc-food">
+							<p>sadasdasdasdasdasdasds</p>
+						</div>
+						<div class="price">
+							<span>10pesos</span><span><i class='bx bxs-plus-circle plus-icon' alt="Burger" onclick="showModal('burger', 5.00)"></i></span>
+						</div>
+					</div>
+
+
+<div id="productModal" class="modal">
+        <span onclick="hideModal()" style="cursor: pointer;">&times;</span>
+        <h3 id="productName"></h3>
+        <p>Price: $<span id="productPrice"></span></p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" required><br>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+
+
+
+
+
+				</div>
+					
+			</div>
+
+			
+		</section>
+
+
+
+
+	</div>
+	
+<script>
+	
+
+	window.onload = function(){
+		productModal.style.display = "none";
+	}
+
+// JavaScript functions to show/hide modal and handle order placement
+        function showModal(productName, productPrice) {
+            document.getElementById("productName").innerText = productName;
+            document.getElementById("productPrice").innerText = productPrice.toFixed(2);
+            document.getElementById("quantity").value = ""; // Reset quantity input
+            document.getElementById("productModal").style.display = "block";
+
+
+        }
+
+        function hideModal() {
+            document.getElementById("productModal").style.display = "none";
+        }
+
+        function placeOrder() {
+            var productName = document.getElementById("productName").innerText;
+            var quantity = document.getElementById("quantity").value;
+
+            // Use AJAX to send order details to process_order.php
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    alert(xhr.responseText); // Display the response from process_order.php
+                    hideModal(); // Close the modal after placing the order
+                }
+            };
+            xhr.open("POST", "process_order.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("product=" + encodeURIComponent(productName) + "&quantity=" + encodeURIComponent(quantity));
+        }
+
+
+
+</script>
+</body>
+</html>

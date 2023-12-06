@@ -1,0 +1,140 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: 'Luxurious Roman', cursive;
+  background-image: url(images/background.png);
+}
+
+.main{
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  width: 135px;
+  cursor: pointer;
+  margin-top: -2.5%;
+}
+
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px; 
+  position: relative;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #450000;
+  text-transform: uppercase;
+}
+.navbar ul li a.active{
+  color:#450000;
+  font-weight: bold;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0%;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+.wrapper{
+  width: 1200px;
+  margin: 50px auto;
+}
+
+.title{
+  text-align: center;
+}
+.title h1{
+  font-size: 120px;
+  color: #450000;
+}
+
+.content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  color: #450000;
+  
+}
+
+.content h1{
+  font-size: 70px;
+  margin-top: 25%;
+  margin-right: 50%;
+}
+
+.content h2{
+  font-size: 70px;
+  margin-left: 50%;
+}
+.content h3{
+  font-size: 70px;
+  margin-top: 25%;
+}
+
+.content h4{
+  font-size: 50px;
+  margin-top: 20%;
+  margin-right: 50%;
+}
+
+.content h5{
+  font-size: 50px;
+  margin-top: 40%;
+  margin-left: 50%;
+}
+
+.content img.a{
+  width: 25%;
+  margin: 5%;
+  float: right;
+  margin-right: 20%;
+}
+
+.content img.b{
+  width: 25%;
+  margin: 5%;
+  float: left;
+  margin-left: 20%;
+  margin-top: 20%;
+}
+.content p.a{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+  margin-right: 50%;
+  margin-left: 2.5%;
+  text-align: justify;
+}
+.content p.b{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+  margin-left: 50%;
+  margin-right: 2.5%;
+  text-align: justify;
+}

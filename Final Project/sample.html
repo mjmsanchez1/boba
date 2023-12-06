@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+</head>
+<body>
+    <form action="process_order.php" method="post">
+        <label for="product_name">Product Name:</label>
+        <select name="product_name" id="product_name">
+            <option value="Choco Mousse">Choco Mousse</option>
+            <!-- Add other product options here -->
+        </select>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" min="1" required>
+        <br>
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>
